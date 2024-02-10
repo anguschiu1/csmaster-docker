@@ -112,4 +112,4 @@ curl -X 'DELETE' \
 When more time is given, we can improve the applications with:
 1. Introduce monitoring and logging tools to the web applications
 2. Modify API endpoints to support GraphQL, to enable more fine-grained and flexible data access
-3. Improve the design so that user can update customer record with both structured and unstructured data, such as BLOB and JSON data.
+3. Improve the design so that user can update customer record with both semi-structured and unstructured data, such as data in JSON format and BLOB.
