@@ -98,3 +98,18 @@ curl -X 'DELETE' \
   -H 'accept: */*'
 ```
 
+# Redesign the application to deploy to GCP using native cloud
+
+1. Using Maven App Engine Plugin to rebuild and redeploy the web application to Platform-as-a-Service (PaaS) serverless platform like Google App Engine
+2. Using Google App Engine, the REST services can be deployed in very cost-effective manner, automatic Scaling allows service to scale up and scale down according to the traffic.
+3. Replace MySql by cloud-based solution, like Google Cloud Datastore. By adding "GCP Datastore Starter" as dependency in `pom.xml`, maven will import libraries from GCP, and enable web application to use Google Cloud Datastore as repository, as if it is using databases solution. Comparing with maintaining database ourself, using cloud-based datastore also improve data resiliency, and facilitate multiple REST services to share and update unified datasource. 
+4. The deployed web applications are located in virtual network environment accessible by known VPCs via Cloud Endpoints, but not necessarily accessible to public internet.
+
+![GCP layout](GCP%20Layout.drawio.svg)
+
+# Further improvement
+
+When more time is given, we can improve the applications with:
+1. Introduce monitoring and logging tools to the web applications
+2. Modify API endpoints to support GraphQL, to enable more fine-grained and flexible data access
+3. Improve the design so that user can update customer record with both structured and unstructured data, such as BLOB and JSON data.
