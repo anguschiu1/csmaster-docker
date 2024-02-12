@@ -113,3 +113,4 @@ When more time is given, we can improve the applications with:
 1. Introduce monitoring and logging tools to the web applications
 2. Modify API endpoints to support GraphQL, to enable more fine-grained and flexible data access
 3. Improve the design so that user can update customer record with both semi-structured and unstructured data, such as data in JSON format and BLOB.
+4. As a production project, all sensitive configuration such as DB connection details and passwords should be refactored into environment variables and safely stored in the environment itself, or introduce CI/CD tools like Jenkins with secret managers (e.g. HashiCorp Vault) to inject secrets during deployments.
