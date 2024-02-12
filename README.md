@@ -104,6 +104,8 @@ curl -X 'DELETE' \
 2. Using Google App Engine, the REST services can be deployed in very cost-effective manner, automatic Scaling allows service to scale up and scale down according to the traffic.
 3. Replace MySql by cloud-based solution, like Google Cloud Datastore. By adding "GCP Datastore Starter" as dependency in `pom.xml`, maven will import libraries from GCP, and enable web application to use Google Cloud Datastore as repository, as if it is using databases solution. Comparing with maintaining database ourself, using cloud-based datastore also improve data resiliency, and facilitate multiple REST services to share and update unified datasource. 
 4. The deployed web applications are located in virtual network environment accessible by known VPCs via Cloud Endpoints, but not necessarily accessible to public internet.
+5. Introduce Google Trace and Logging service to better monitor the system in production environment.
+6. Introduce Eureka Service Discovery to enable API gateway to discover backend API resources. 
 
 ![GCP layout](GCP%20Layout.drawio.svg)
 
